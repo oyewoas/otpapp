@@ -55,9 +55,9 @@ const createAuthCode = async (req: authCode, res: any) => {
       } else if (user && verified) {
         // Update user data
         db.push(path, { id: userId, phone_number: user.phone_number, verified: true });
-        res.json({id: userId, phone_number: user.phone_number, verified: true })
+        res.json({id: userId, phone_number: user.phone_number, verified: true, message: 'Verification Successful' })
     } else {
-        res.json({ id: userId, phone_number: user.phone_number, verified: user.verified})
+        res.json({ id: userId, phone_number: user.phone_number, verified: user.verified, message: 'Already Verified' })
     }
     } catch(error) {
       res.status(500).json({ message: 'Error retrieving user'})
