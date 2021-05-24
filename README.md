@@ -24,5 +24,5 @@ In the backend project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:9000](http://localhost:9000).
 
-The page will reload if you make edits.\
+The server will reload if you make edits.\
 You will also see any lint errors in the console.
